@@ -1,5 +1,4 @@
-
-import { GraduationCap } from 'lucide-react'
+import React from 'react'
 
 const educationData = [
     {
@@ -7,14 +6,14 @@ const educationData = [
         degree: 'S1 Sistem Informasi',
         university: 'Universitas Metamedia',
         gpa: '3.76',
-        logo: '/images/metamedia1.png',
+        logo: `${import.meta.env.BASE_URL}images/metamedia1.png`,
     },
     {
         date: 'SEP 2018 - OKT 2021',
         degree: 'D3 Manajemen Informatika',
         university: 'Politeknik Negeri Padang',
         gpa: '3.77',
-        logo: '/images/pnp1.png',
+        logo: `${import.meta.env.BASE_URL}images/pnp1.png`,
     },
 ]
 
@@ -22,10 +21,9 @@ function Educations({ darkMode }) {
     return (
         <section
             id="educations"
-            className={`min-h-screen px-6 py-28 transition-colors duration-300 ${darkMode
-                    ? 'bg-[#09090d] text-white'
-                    : 'bg-gray-100 text-gray-900'
-                }`}
+            className={`min-h-screen px-6 py-28 transition-colors duration-300 ${
+                darkMode ? 'bg-[#09090d] text-white' : 'bg-gray-100 text-gray-900'
+            }`}
         >
             <div className="mx-auto max-w-4xl">
 
@@ -34,7 +32,6 @@ function Educations({ darkMode }) {
                     <h2 className="font-serif text-4xl font-bold md:text-5xl">
                         Pendidikan
                     </h2>
-
                     <div className="mx-auto mt-6 h-1 w-16 rounded-full bg-violet-600" />
                 </div>
 
@@ -42,8 +39,9 @@ function Educations({ darkMode }) {
                 <div className="relative">
 
                     <div
-                        className={`absolute bottom-4 left-7 top-4 w-0.5 ${darkMode ? 'bg-white/10' : 'bg-gray-300'
-                            }`}
+                        className={`absolute bottom-4 left-7 top-4 w-0.5 ${
+                            darkMode ? 'bg-white/10' : 'bg-gray-300'
+                        }`}
                     />
 
                     <div className="space-y-10">
@@ -55,10 +53,11 @@ function Educations({ darkMode }) {
 
                                 {/* University Logo */}
                                 <div
-                                    className={`relative z-10 flex h-14 w-14 shrink-0 items-center justify-center rounded-2xl border p-2 shadow-md ${darkMode
+                                    className={`relative z-10 flex h-14 w-14 shrink-0 items-center justify-center rounded-2xl border p-2 shadow-md ${
+                                        darkMode
                                             ? 'border-white/10 bg-[#1c1c22]'
                                             : 'border-gray-200 bg-white'
-                                        }`}
+                                    }`}
                                 >
                                     <img
                                         src={education.logo}
@@ -69,10 +68,11 @@ function Educations({ darkMode }) {
 
                                 {/* Card */}
                                 <div
-                                    className={`min-w-0 flex-1 rounded-2xl border p-6 shadow-lg transition duration-300 hover:-translate-y-1 md:p-8 ${darkMode
+                                    className={`min-w-0 flex-1 rounded-2xl border p-6 shadow-lg transition duration-300 hover:-translate-y-1 md:p-8 ${
+                                        darkMode
                                             ? 'border-white/10 bg-[#151519]'
                                             : 'border-gray-200 bg-white'
-                                        }`}
+                                    }`}
                                 >
                                     <p className="mb-3 font-mono text-sm tracking-widest text-violet-500">
                                         {education.date}
