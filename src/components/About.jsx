@@ -77,10 +77,8 @@ function About({ darkMode }) {
                 
                 {/* Wadah Foto */}
                 <div className={`relative w-64 h-64 md:w-72 md:h-72 rounded-3xl overflow-hidden shadow-md border-4 ${darkMode ? 'border-slate-700 bg-slate-900' : 'border-white bg-gray-100'}`}>
-                  {/* Ganti src di bawah dengan path gambar lokalmu, misal: /images/profile.jpg */}
                   <img
-                    src="/images/profile.jpg"
-                    // src="https://placehold.co/400x400/7c3aed/ffffff?text=Tya&font=roboto"
+                    src={`${import.meta.env.BASE_URL}images/profile.jpg`}
                     alt="Profile"
                     className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
                   />
