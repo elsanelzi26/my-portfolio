@@ -129,7 +129,7 @@ const Hero = ({ darkMode, setActivePage }) => {
 
                             {/* GitHub */}
                             <a
-                                href="https://github.com/elsanelzi"
+                                href="https://github.com/elsanelzi26"
                                 target="_blank"
                                 rel="noreferrer"
                                 className="flex h-14 w-14 items-center justify-center rounded-full bg-white text-black transition hover:scale-110"
