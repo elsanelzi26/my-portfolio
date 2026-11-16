@@ -4,7 +4,7 @@ import {
     ArrowRight,
 } from 'lucide-react';
 
-const roles = ["Software Engineer"];
+const roles = ["Web Programmer"];
 
 const Hero = ({ darkMode, setActivePage }) => {
     const [currentRoleIndex, setCurrentRoleIndex] = useState(0);
