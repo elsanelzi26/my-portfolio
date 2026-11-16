@@ -6,7 +6,7 @@ import {
 
 const roles = ["Web Programmer"];
 
-const Hero = ({ darkMode }) => {
+const Hero = ({ darkMode, setActivePage }) => {
     const [currentRoleIndex, setCurrentRoleIndex] = useState(0);
     const [displayedText, setDisplayedText] = useState("");
     const [isDeleting, setIsDeleting] = useState(false);
@@ -37,6 +37,12 @@ const Hero = ({ darkMode }) => {
         const timer = setTimeout(handleTyping, typingSpeed);
         return () => clearTimeout(timer);
     }, [displayedText, isDeleting, currentRoleIndex, typingSpeed]);
+
+    // Fungsi pembantu untuk navigasi dan scroll ke atas
+    const handleNavClick = (page) => {
+        setActivePage(page);
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+    };
 
     return (
         <section
@@ -71,20 +77,22 @@ const Hero = ({ darkMode }) => {
                         </p>
 
                         <div className="flex flex-wrap gap-4">
-                            <a
-                                href="#projects"
-                                className="flex items-center gap-2 rounded-full bg-gradient-to-r from-violet-500 to-purple-400 px-7 py-4 font-semibold text-white transition hover:scale-105"
+                            {/* Tombol View my work diarahkan ke halaman Proyek */}
+                            <button
+                                onClick={() => handleNavClick('projects')}
+                                className="flex items-center gap-2 rounded-full bg-gradient-to-r from-violet-500 to-purple-400 px-7 py-4 font-semibold text-white transition hover:scale-105 cursor-pointer"
                             >
                                 View my work
                                 <ArrowRight size={18} />
-                            </a>
+                            </button>
 
-                            <a
-                                href="#about"
-                                className="rounded-full border border-white/10 px-7 py-4 font-semibold text-white transition hover:bg-white/10"
+                            {/* Tombol About me diarahkan ke halaman Tentang */}
+                            <button
+                                onClick={() => handleNavClick('about')}
+                                className="rounded-full border border-white/10 px-7 py-4 font-semibold text-white transition hover:bg-white/10 cursor-pointer"
                             >
                                 About me
-                            </a>
+                            </button>
                         </div>
                     </div>
                 </div>
@@ -133,7 +141,7 @@ const Hero = ({ darkMode }) => {
 
                             {/* Email */}
                             <a
-                                href="mailto:elsanelzi7.com"
+                                href="mailto:elsanelzi7@gmail.com"
                                 className="flex h-14 w-14 items-center justify-center rounded-full bg-white text-black transition hover:scale-110"
                             >
                                 <Mail size={25} />

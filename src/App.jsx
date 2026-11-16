@@ -1,4 +1,3 @@
-
 import { useState } from 'react'
 import Navbar from './components/Navbar'
 import Hero from './components/Hero'
@@ -13,8 +12,9 @@ function App() {
   const [darkMode, setDarkMode] = useState(true)
   const [activePage, setActivePage] = useState('home')
 
+  // Objek halaman yang terstruktur dengan benar
   const pages = {
-    home: <Hero darkMode={darkMode} />,
+    home: <Hero darkMode={darkMode} setActivePage={setActivePage} />,
     about: <About darkMode={darkMode} />,
     skills: <Skills darkMode={darkMode} />,
     educations: <Educations darkMode={darkMode} />,
@@ -27,7 +27,7 @@ function App() {
     <div
       className={`min-h-screen transition-colors duration-300 ${
         darkMode
-          ? 'bg-[#09090d] text-white'
+          ? 'bg-[#09009d] text-white'
           : 'bg-gray-100 text-gray-900'
       }`}
     >
