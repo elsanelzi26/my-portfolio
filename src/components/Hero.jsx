@@ -106,7 +106,7 @@ const Hero = ({ darkMode, setActivePage }) => {
                             EL
                         </h2>
                         <p className="mt-3 font-mono text-sm tracking-[0.2em] text-white/90">
-                            WEB PROGRAMMER
+                            WEB DEVELOPER
                         </p>
                     </div>
 
